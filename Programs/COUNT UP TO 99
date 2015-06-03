@@ -1,92 +1,93 @@
-; Type your assembly code here.
-; Click A or press F8 to assemble the code.
-; Click S to Step or Increase-Clock-Rate
+; Count up to 99
+; Written By: Connor Edwards
+; Desc: Simple Assembler program
+; 	    that counts to 99
 
-START:
+START: ; Starts the main program
 
-MOVW 0Xfd
-MOVWR PORTA
-CALL UNITS
+	MOVW 0Xfd	; Writes the "0" Character to the display
+	MOVWR PORTA
+	CALL UNITS
 
-MOVW 0X85
-MOVWR PORTA
-CALL UNITS
+	MOVW 0X85	; Writes the "1" Character to the display
+	MOVWR PORTA
+	CALL UNITS
 
-MOVW 0Xdb
-MOVWR PORTA
-CALL UNITS
+	MOVW 0Xdb	; Writes the "2" Character to the display
+	MOVWR PORTA
+	CALL UNITS
 
-MOVW 0Xcf
-MOVWR PORTA
-CALL UNITS
+	MOVW 0Xcf	; Writes the "3" Character to the display
+	MOVWR PORTA
+	CALL UNITS
 
-MOVW 0Xa7
-MOVWR PORTA
-CALL UNITS
+	MOVW 0Xa7	; Writes the "4" Character to the display
+	MOVWR PORTA
+	CALL UNITS
 
-MOVW 0Xee
-MOVWR PORTA
-CALL UNITS
+	MOVW 0Xee	; Writes the "5" Character to the display
+	MOVWR PORTA
+	CALL UNITS
 
-MOVW 0Xfe
-MOVWR PORTA
-CALL UNITS
+	MOVW 0Xfe	; Writes the "6" Character to the display
+	MOVWR PORTA
+	CALL UNITS
 
-MOVW 0Xc5
-MOVWR PORTA
-CALL UNITS
+	MOVW 0Xc5	; Writes the "7" Character to the display
+	MOVWR PORTA
+	CALL UNITS
 
-MOVW 0Xff
-MOVWR PORTA
-CALL UNITS
+	MOVW 0Xff	; Writes the "8" Character to the display
+	MOVWR PORTA
+	CALL UNITS
 
-MOVW 0Xe7
-MOVWR PORTA
-CALL UNITS
+	MOVW 0X7e	; Writes the "9" Character to the display
+	MOVWR PORTA
+	CALL UNITS
 
-JMP START
+JMP START 	; Jumps back to the start of the main program
 
-UNITS:
+UNITS:	; Subroutine for counting 0-9 on the units counter
+ 
+	MOVW 0X7d	; Writes the "0" Character to the display
+	MOVWR PORTA
+	NOP
 
-MOVW 0X7d
-MOVWR PORTA
-NOP
+	MOVW 0X05	; Writes the "1" Character to the display
+	MOVWR PORTA
+	NOP
 
-MOVW 0X05
-MOVWR PORTA
-NOP
+	MOVW 0X5b	; Writes the "2" Character to the display
+	MOVWR PORTA
+	NOP
 
-MOVW 0X5b
-MOVWR PORTA
-NOP
+	MOVW 0X4f	; Writes the "3" Character to the display
+	MOVWR PORTA
+	NOP
 
-MOVW 0X4f
-MOVWR PORTA
-NOP
+	MOVW 0X27	; Writes the "4" Character to the display
+	MOVWR PORTA
+	NOP
 
-MOVW 0X27
-MOVWR PORTA
-NOP
+	MOVW 0X6e	; Writes the "5" Character to the display
+	MOVWR PORTA
+	NOP
 
-MOVW 0X6e
-MOVWR PORTA
-NOP
+	MOVW 0X7e	; Writes the "6" Character to the display
+	MOVWR PORTA
+	NOP
 
-MOVW 0X7e
-MOVWR PORTA
-NOP
+	MOVW 0X45	; Writes the "7" Character to the display
+	MOVWR PORTA
+	NOP
 
-MOVW 0X45
-MOVWR PORTA
-NOP
+	MOVW 0X7f	; Writes the "8" Character to the display
+	MOVWR PORTA
+	NOP
 
-MOVW 0X7f
-MOVWR PORTA
-NOP
+	MOVW 0X67	; Writes the "9" Character to the display
+	MOVWR PORTA
+	NOP
 
-MOVW 0X67
-MOVWR PORTA
-NOP
-
-RET
+RET		; Return back to the main program
 

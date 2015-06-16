@@ -1,7 +1,7 @@
-; Count up to 99
-; Written By: Connor Edwards
-; Desc: Simple Assembler program
-; 	    that counts to 99
+; ==========================
+; COUNT UP TO 99
+; WRITTEN BY: CONNOR EDWARDS
+; ==========================
 
 START: ; Starts the main program
 

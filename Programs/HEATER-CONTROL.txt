@@ -1,0 +1,23 @@
+; ==========================
+; CONTROLLING A HEATER
+; WRITTEN BY: CONNOR EDWARDS
+; ==========================
+
+MOVW 0X01
+MOVWR TRISA
+
+START: 
+    MOVRW PORTA
+    ANDW 0X01
+    JPZ TOO_COLD
+    JMP TOO_HOT
+
+TOO_COLD:
+    MOVW 0X80
+    MOVWR PORTA
+    JMP START
+
+TOO_HOT:
+    MOVW 0X00
+    MOVWR PORTA
+    JMP START
